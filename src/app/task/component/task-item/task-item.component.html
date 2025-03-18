@@ -16,7 +16,7 @@
   <ion-card-content>
     <p *ngIf="!isEditing">{{ task.description }}</p>
     <ion-textarea
-      *ngIf="isEditing"
+      *ngIf="isEditing" 
       [(ngModel)]="editableTask.description"
     ></ion-textarea>
   </ion-card-content>
