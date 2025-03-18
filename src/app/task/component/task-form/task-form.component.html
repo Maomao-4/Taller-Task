@@ -1,0 +1,60 @@
+<ion-card class="form-container">
+  <ion-card-header>
+    <ion-card-title class="title">Agregar Nueva Nota</ion-card-title>
+  </ion-card-header>
+
+  <div class="task-form-container">
+    <form [formGroup]="taskForm" (ngSubmit)="submit()">
+      <ion-item>
+        <ion-label position="floating" for="title">Título:</ion-label>
+        <ion-input id="title" type="text" formControlName="title"></ion-input>
+      </ion-item>
+      <div
+        *ngIf="taskForm.get('title')?.invalid && taskForm.get('title')?.touched"
+        class="error-message"
+      >
+        <span *ngIf="taskForm.get('title')?.errors?.['required']"
+          >El título es obligatorio.</span
+        >
+        <span *ngIf="taskForm.get('title')?.errors?.['minlength']"
+          >Mínimo 3 caracteres.</span
+        >
+      </div>
+
+      <ion-item>
+        <ion-label class="prueba" position="floating" for="description"
+          >Descripción:</ion-label
+        >
+        <ion-textarea
+          id="description"
+          formControlName="description"
+        ></ion-textarea>
+      </ion-item>
+      <div
+        *ngIf="
+          taskForm.get('description')?.invalid &&
+          taskForm.get('description')?.touched
+        "
+        class="error-message"
+      >
+        <span *ngIf="taskForm.get('description')?.errors?.['required']"
+          >La descripción es obligatoria.</span
+        >
+      </div>
+
+      <ion-item>
+        <ion-label position="floating">Fecha:</ion-label>
+        <ion-datetime
+          formControlName="date"
+          display-format="DD/MM/YYYY"
+        ></ion-datetime>
+      </ion-item>
+
+      <app-button
+        text="Guardar Nota"
+        type="submit"
+        [disabled]="taskForm.invalid"
+      ></app-button>
+    </form>
+  </div>
+</ion-card>

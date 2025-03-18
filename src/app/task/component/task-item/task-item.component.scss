@@ -1,0 +1,45 @@
+ion-card {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  color: #4e342e;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease-in-out;
+
+  &.done {
+    background: #d4edda; 
+  }
+}
+
+ion-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+ion-card-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4e342e;
+}
+
+ion-card-subtitle {
+  font-size: 14px;
+  color: #4e342eb9;
+}
+
+ion-button {
+  margin-top: 10px;
+}
+
+.check-btn {
+  color: red; 
+}
+
+.done .check-btn {
+  color: green;
+}
+

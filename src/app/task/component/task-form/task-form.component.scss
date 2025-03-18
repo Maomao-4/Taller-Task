@@ -1,0 +1,62 @@
+ion-card-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #5a3e1b;
+  text-align: center;
+}
+
+.form-container{
+  background: #f5f5dc;
+}
+
+.task-form-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  position: relative;
+}
+
+.task-form-container ion-item {
+  --background: transparent;
+  --border-radius: 8px;
+  --padding-start: 12px;
+  --padding-end: 12px;
+  --inner-border-width: 0;
+}
+
+.task-form-container ion-label {
+  font-size: 14px;
+  color: #777;
+  background: transparent;
+  z-index: 999;
+}
+
+
+.task-form-container ion-input,
+.task-form-container ion-textarea {
+  --background: #f9f9f9;
+  --border-radius: 8px;
+  --padding: 12px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.task-form-container ion-item.has-focus ion-label,
+.task-form-container ion-item.has-value ion-label {
+  color: #007bff;
+}
+
+.error-message {
+  color: #d9534f;
+  font-size: 14px;
+  margin-top: 4px;
+  padding-left: 12px;
+}
+
+ion-datetime{
+  color: #5a3e1b;
+}

@@ -1,0 +1,14 @@
+:host {
+    display: block; // ← Asegura que el componente sea visible
+    width: 100%;
+  }
+  
+  .custom-header {
+    --background: linear-gradient(135deg, #6D4C41, #4E342E); // Fondo madera
+    --color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+  

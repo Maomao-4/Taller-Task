@@ -1,0 +1,38 @@
+ion-content {
+  display: flex;
+  justify-content: center; 
+    align-items: flex-start; 
+  min-height: 100vh; 
+  background-color: #f5f5dc;
+  padding: 20px;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+
+.task-form,
+.task-list {
+  width: 100%;
+  max-width: 600px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 70%; 
+  }
+
+  .task-form, 
+  .task-list {
+    max-width: 70%;
+  }
+}
